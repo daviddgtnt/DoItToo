@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://unpkg.com/blocks.css/dist/blocks.min.css" />
+
+<h1>DoItToo</h1>
+
+<form action="/saveEdit/{{todo_item.id}}/" method="post">{% csrf_token %}
+	<span>Content: </span><input type="text" name="content" value="{{todo_item.content}}" />
+	<span>Description: </span><input type="text" name="desc" value="{{todo_item.desc}}" />
+	<input type="submit" value="Save" />
+</form>
+<!-- <ul> 
+	
+  {% for todo_item in all_items %}
+    <li>{% if todo_item.done %}<del>{% endif %}{{ todo_item.content }}{% if todo_item.done %}</del>{% endif %}
+    <form action="/deleteTodo/{{todo_item.id}}/" 
+    style="display: inline;"
+    method="post">{% csrf_token %}
+      <input type="submit" value="Delete"/>
+    </form>
+		<form action="/toggleDone/{{todo_item.id}}/"
+		style="display: inline;"
+		method="post">{% csrf_token %}
+			<input type="submit" value="{% if todo_item.done %}Not Done{% else %}Done{% endif %}"/>
+		</form>
+		<form action="/editTodo/{{todo_item.id}}/"
+		style="display: inline;"
+		method="post">{% csrf_token %}
+			<input type="submit" value="Edit"
+    </li>
+  {% endfor %}
+</ul>
+
+<form action="/addTodo/" method="post">{% csrf_token %}
+  <input type="text" name="content"/>
+  <input type="submit" value="Add"/>
+</form> -->

@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://unpkg.com/blocks.css/dist/blocks.min.css" />
+
+<h1>DoItToo</h1>
+
+<a href="/">Home</a>
+<h2>{{todo_item.content}}</h2>
+{% if todo_item.done %}
+<h3>Finished task</h3>
+{% endif %}
+<p>{{todo_item.desc}}</p>
+<!-- <ul> 
+	
+  {% for todo_item in all_items %}
+    <li>{% if todo_item.done %}<del>{% endif %}{{ todo_item.content }}{% if todo_item.done %}</del>{% endif %}
+    <form action="/deleteTodo/{{todo_item.id}}/" 
+    style="display: inline;"
+    method="post">{% csrf_token %}
+      <input type="submit" value="Delete"/>
+    </form>
+		<form action="/toggleDone/{{todo_item.id}}/"
+		style="display: inline;"
+		method="post">{% csrf_token %}
+			<input type="submit" value="{% if todo_item.done %}Not Done{% else %}Done{% endif %}"/>
+		</form>
+		<form action="/editTodo/{{todo_item.id}}/"
+		style="display: inline;"
+		method="post">{% csrf_token %}
+			<input type="submit" value="Edit"
+    </li>
+  {% endfor %}
+</ul>
+
+<form action="/addTodo/" method="post">{% csrf_token %}
+  <input type="text" name="content"/>
+  <input type="submit" value="Add"/>
+</form> -->
